@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #3bc7f0;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Section wave dividers, drawn as full-bleed SVG-less shapes via clip-path */
+.wave-cyan-down {
+  position: relative;
+}
+.wave-cyan-down::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 48px;
+  background: linear-gradient(90deg, #2f6fed 0%, #3bc7f0 55%, #7fe3ff 100%);
+  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
+}
+
+@media (min-width: 768px) {
+  .wave-cyan-down::after {
+    height: 64px;
+    clip-path: polygon(0 20%, 100% 55%, 100% 100%, 0% 100%);
+  }
+}
+
+.wave-navy-down {
+  position: relative;
+}
+.wave-navy-down::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 56px;
+  background: #16233d;
+  clip-path: polygon(0 100%, 100% 15%, 100% 100%);
+}
+
+@media (min-width: 768px) {
+  .wave-navy-down::after {
+    height: 88px;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
