@@ -1,11 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a528240-fa69-48fc-b0d4-4f046701b4d4" name="Changes" comment="" />
+    <list default="true" id="2a528240-fa69-48fc-b0d4-4f046701b4d4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Inkora.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/Inkora.webp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.000424158220941" />
+      <entry key="MS500" value="1.3726363213918729" />
+      <entry key="S2" value="3.4983604814462534" />
+      <entry key="S5" value="5.829219303753123" />
+      <entry key="S10" value="7.546625168156956" />
+      <entry key="S30" value="9.696696370556685" />
+      <entry key="S60" value="12.181287249570621" />
+      <entry key="M2" value="20.166593065755777" />
+      <entry key="M5" value="49.246262571879114" />
+      <entry key="M10" value="86.94231053014201" />
+      <entry key="M15" value="114.76960111143731" />
+      <entry key="M30" value="164.60482620729002" />
+      <entry key="H1" value="205.46449669083117" />
+      <entry key="H2" value="232.3431450433535" />
+      <entry key="H4" value="247.864247883235" />
+      <entry key="D1" value="262.02380900804985" />
+      <entry key="W1" value="264.5717731449727" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="8.834394015254029E-111" />
+      <entry key="S2" value="3.5760668874014914E-28" />
+      <entry key="S5" value="1.469909168065591E-11" />
+      <entry key="S10" value="5.33875938231548E-6" />
+      <entry key="S30" value="0.027646373577155426" />
+      <entry key="S60" value="0.2357831795588674" />
+      <entry key="M2" value="0.7128904522144044" />
+      <entry key="M5" value="1.5559288801087876" />
+      <entry key="M10" value="2.2268684798518197" />
+      <entry key="M15" value="2.6035950300771815" />
+      <entry key="M30" value="3.149747349768399" />
+      <entry key="H1" value="3.524548637484007" />
+      <entry key="H2" value="3.7476705599476032" />
+      <entry key="H4" value="3.869893039724105" />
+      <entry key="D1" value="3.9777412105536483" />
+      <entry key="W1" value="3.9968057449047816" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.8648940176074794" />
+      <entry key="MS500" value="1.330795098422909" />
+      <entry key="S2" value="3.464268552608775" />
+      <entry key="S5" value="5.804739401793347" />
+      <entry key="S10" value="7.530318592488797" />
+      <entry key="S30" value="9.715924667993006" />
+      <entry key="S60" value="12.40729291546853" />
+      <entry key="M2" value="20.866712860737998" />
+      <entry key="M5" value="50.78769120348577" />
+      <entry key="M10" value="89.15681481831565" />
+      <entry key="M15" value="117.36287465617295" />
+      <entry key="M30" value="167.7478427733081" />
+      <entry key="H1" value="208.98512050914513" />
+      <entry key="H2" value="236.088682476311" />
+      <entry key="H4" value="251.73302691257646" />
+      <entry key="D1" value="266.00135750358703" />
+      <entry key="W1" value="268.56855118024373" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -20,17 +90,33 @@
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/inkora&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\inkora\public\images" />
+      <recent name="D:\inkora\public" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
@@ -61,6 +147,14 @@
       <option name="presentableId" value="Default" />
       <updated>1786512535550</updated>
       <workItem from="1786512538843" duration="4000" />
+      <workItem from="1786512555308" duration="1280000" />
+      <workItem from="1786514890419" duration="1684000" />
+      <workItem from="1786524439889" duration="3102000" />
+      <workItem from="1786548512927" duration="348000" />
+      <workItem from="1787029395763" duration="1487000" />
+      <workItem from="1787327901370" duration="3634000" />
+      <workItem from="1787634801490" duration="1059000" />
+      <workItem from="1787645892105" duration="38000" />
     </task>
     <servers />
   </component>

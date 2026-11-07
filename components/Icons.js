@@ -1,20 +1,6 @@
 export function LogoMark({ className = "h-8 w-8" }) {
   return (
-    <svg viewBox="0 0 40 40" className={className} aria-hidden="true">
-      <rect width="40" height="40" rx="9" fill="#0a1120" />
-      <path d="M12 8H17V32H12V8Z" fill="#eef4fb" />
-      <path
-        d="M17 20L27 8H33.5L22 20.5L34 32H27.2L17 21.2V20Z"
-        fill="url(#logoGradient)"
-      />
-      <circle cx="27.5" cy="14" r="3.4" fill="#3bc7f0" />
-      <defs>
-        <linearGradient id="logoGradient" x1="17" y1="8" x2="34" y2="32" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#2f6fed" />
-          <stop offset="1" stopColor="#0a1120" />
-        </linearGradient>
-      </defs>
-    </svg>
+    <img src="/images/inkora1.jpg" />
   );
 }
 

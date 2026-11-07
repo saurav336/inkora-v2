@@ -20,7 +20,7 @@ export default function Header() {
             className="sticky top-0 z-50 border-b border-black/5 bg-gradient-to-b from-slate-200/95 to-slate-100/95 backdrop-blur">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
                 <a href="#top" className="flex items-center gap-2.5">
-                    <Image src={'/inkora.webp'} width={100} height={100} alt={'logo'}/>
+                    <Image src={"/images/Inkora.webp"} width={100} height={100} alt={'Logo'}/>
                 </a>
 
                 <nav className="hidden items-center gap-8 md:flex">
