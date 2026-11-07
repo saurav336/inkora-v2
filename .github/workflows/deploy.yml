@@ -1,0 +1,27 @@
+
+name: Deploy Next.js to cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to cPanel
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.CPANEL_HOST }}
+          username: ${{ secrets.CPANEL_USERNAME }}
+          key: ${{ secrets.CPANEL_SSH_KEY }}
+          port: ${{ secrets.CPANEL_PORT }}
+          script: |
+            cd /home/inkoraof/public_html/myapp
+            git pull origin main
+            npm ci
+            npm run build
+            mkdir -p tmp
+            touch tmp/restart.txt
