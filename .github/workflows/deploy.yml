@@ -15,25 +15,28 @@ jobs:
           host: ${{ secrets.CPANEL_HOST }}
           username: ${{ secrets.CPANEL_USERNAME }}
           key: ${{ secrets.CPANEL_SSH_KEY }}
+          # CRITICAL: Stop the script if any command fails (like git pull)
+          script_stop: true 
           script: |
-            # 1. Navigate to your app directory
+            # 1. Navigate to app
             cd ~/public_html/myapp
             
-            # 2. FIX FOR GIT ERROR: Tell server to trust GitHub
-            mkdir -p ~/.ssh
-            ssh-keyscan -H github.com >> ~/.ssh/known_hosts 2>/dev/null
+            # 2. FIX GIT ERROR: Tell git to use the deploy key we just created
+            export GIT_SSH_COMMAND="ssh -i ~/.ssh/github_deploy_key -o StrictHostKeyChecking=no"
             
-            # 3. Pull latest code
+            # 3. Pull code (This will now work because of the Deploy Key)
             git pull origin main
             
-            # 4. FIX FOR NPM ERROR: Activate cPanel Node Environment
-            # REPLACE THE LINE BELOW WITH YOUR ACTUAL SOURCE COMMAND FROM CPANEL
+            # 4. Activate Node Environment (Replace with your actual source command)
             source /home/inkoraof/nodevenv/public_html/myapp/24/bin/activate && cd /home/inkoraof/public_html/myapp
             
-            # 5. Install dependencies and build
+            # 5. FIX BUILD ERROR: Increase memory limit for Next.js
+            export NODE_OPTIONS="--max-old-space-size=2048"
+            
+            # 6. Install and Build
             npm install
             npm run build
             
-            # 6. Restart the cPanel Node server
+            # 7. Restart server
             mkdir -p tmp
             touch tmp/restart.txt
