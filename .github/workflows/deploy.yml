@@ -3,7 +3,7 @@ name: Deploy Next.js to cPanel
 on:
   push:
     branches:
-      - main # Change to 'master' if that's your main branch
+      - main
 
 jobs:
   deploy:
@@ -15,18 +15,27 @@ jobs:
           host: ${{ secrets.CPANEL_HOST }}
           username: ${{ secrets.CPANEL_USERNAME }}
           key: ${{ secrets.CPANEL_SSH_KEY }}
+          # CRITICAL: Stop the script if any command fails (like git pull)
+          script_stop: true 
           script: |
-            # 1. Navigate to your app directory
+            # 1. Navigate to app
             cd ~/public_html/myapp
             
-            # 2. Pull latest code
+            # 2. FIX GIT ERROR: Tell git to use the deploy key we just created
+            export GIT_SSH_COMMAND="ssh -i ~/.ssh/github_deploy_key -o StrictHostKeyChecking=no"
+            
+            # 3. Pull code (This will now work because of the Deploy Key)
             git pull origin main
             
-            # 3. Install dependencies and build
+            # 4. Activate Node Environment (Replace with your actual source command)
+            source /home/inkoraof/nodevenv/public_html/myapp/24/bin/activate && cd /home/inkoraof/public_html/myapp
+            # 5. FIX BUILD ERROR: Increase memory limit for Next.js
+            export NODE_OPTIONS="--max-old-space-size=2048"
+            
+            # 6. Install and Build
             npm install
             npm run build
             
-            # 4. RESTART THE NODE SERVER (Crucial for cPanel)
-            # cPanel uses Phusion Passenger. It restarts when this file is touched.
+            # 7. Restart server
             mkdir -p tmp
             touch tmp/restart.txt
