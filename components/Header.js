@@ -1,15 +1,17 @@
 "use client";
 
-import {useState} from "react";
-import {LogoMark} from "./Icons";
+import { useState } from "react";
+import { LogoMark } from "./Icons";
 import Image from "next/image";
 
 
 const NAV_LINKS = [
-    {label: "Services", href: "#services"},
-    {label: "What we make", href: "#what-we-make"},
-    {label: "Process", href: "#process"},
-    {label: "Contact", href: "#contact"},
+    { label: "Services", href: "#services" },
+    { label: "What we make", href: "#what-we-make" },
+    { label: "Team", href: "#team" },
+    { label: "Process", href: "#process" },
+    { label: "Contact", href: "#contact" },
+
 ];
 
 export default function Header() {
@@ -20,7 +22,7 @@ export default function Header() {
             className="sticky top-0 z-50 border-b border-black/5 bg-gradient-to-b from-slate-200/95 to-slate-100/95 backdrop-blur">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
                 <a href="#top" className="flex items-center gap-2.5">
-                    <Image src={"/images/Inkora.webp"} width={100} height={100} alt={'Logo'}/>
+                    <Image src={"/images/Inkora.webp"} width={100} height={100} alt={'Logo'} />
                 </a>
 
                 <nav className="hidden items-center gap-8 md:flex">
@@ -51,8 +53,8 @@ export default function Header() {
                         aria-label="Toggle navigation menu"
                     >
                         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"
-                             strokeLinecap="round">
-                            {open ? <path d="M6 6l12 12M18 6L6 18"/> : <path d="M4 7h16M4 12h16M4 17h16"/>}
+                            strokeLinecap="round">
+                            {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
                         </svg>
                     </button>
                 </div>

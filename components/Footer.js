@@ -1,15 +1,15 @@
-import {LogoMark} from "./Icons";
 import Image from "next/image";
+import footerLogo from "@/public/images/footer_logo.png";
 
 const STUDIO_LINKS = [
-    {label: "Services", href: "#services"},
-    {label: "What we make", href: "#what-we-make"},
-    {label: "Process", href: "#process"},
+    { label: "Services", href: "#services" },
+    { label: "What we make", href: "#what-we-make" },
+    { label: "Process", href: "#process" },
 ];
 
 const CONNECT_LINKS = [
-    {label: "Contact", href: "#contact"},
-    {label: "Get a quote", href: "#contact"},
+    { label: "Contact", href: "#contact" },
+    { label: "Get a quote", href: "#contact" },
 ];
 
 export default function Footer() {
@@ -21,8 +21,8 @@ export default function Footer() {
                         <a href="#top" className="flex items-center gap-2.5">
 
                             <span className="text-lg font-bold tracking-tight text-white">
-                <Image src={'/images/inkora.webp'} alt={'logo'} width={100} height={100} />
-              </span>
+                                <Image src={footerLogo} alt={'logo'} width={180} height={180} />
+                            </span>
                         </a>
                         <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
                             A studio for brand identity, print production and IT solutions &mdash;

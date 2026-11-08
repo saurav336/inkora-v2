@@ -5,7 +5,7 @@ import { useState } from "react";
 const CONTACT_INFO = [
   { label: "Email", value: "inkora18@gmail.com" },
   { label: "Phone", value: "9860757522 | 9828021463 "},
-  { label: "Studio", value: "Jadibuti, Kathmadu" },
+  { label: "Address", value: "Jadibuti, Kathmadu" },
   { label: "Hours", value: "Sun\u2013Fri, 9:30\u20135:30" },
 ];
 

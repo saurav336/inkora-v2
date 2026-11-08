@@ -1,27 +1,32 @@
-
 name: Deploy Next.js to cPanel
 
 on:
   push:
     branches:
-      - main
+      - main # Change to 'master' if that's your main branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Deploy to cPanel
-        uses: appleboy/ssh-action@v1
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.CPANEL_HOST }}
           username: ${{ secrets.CPANEL_USERNAME }}
           key: ${{ secrets.CPANEL_SSH_KEY }}
-          port: ${{ secrets.CPANEL_PORT }}
           script: |
-            cd /home/inkoraof/public_html/myapp
+            # 1. Navigate to your app directory
+            cd ~/public_html/myapp
+            
+            # 2. Pull latest code
             git pull origin main
-            npm ci
+            
+            # 3. Install dependencies and build
+            npm install
             npm run build
+            
+            # 4. RESTART THE NODE SERVER (Crucial for cPanel)
+            # cPanel uses Phusion Passenger. It restarts when this file is touched.
             mkdir -p tmp
             touch tmp/restart.txt
