@@ -10,7 +10,7 @@ export default function Hero() {
         <div>
           <p className="flex items-center gap-2 font-mono text-xs font-semibold tracking-[0.2em] text-cyan-accent">
             <span className="h-1.5 w-1.5 rounded-full bg-cyan-accent" aria-hidden="true" />
-            BRANDING &middot; PRINT &middot; IT SOLUTIONS
+             &middot; PRINT &middot; IT SOLUTIONS
           </p>
 
           <h1 className="text-balance mt-6 text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
