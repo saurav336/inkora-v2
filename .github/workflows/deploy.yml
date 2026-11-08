@@ -29,7 +29,7 @@ jobs:
             git clean -fd
             
             # 4. Activate Node Environment (REPLACE WITH YOUR ACTUAL SOURCE COMMAND)
-            source /home/YOUR_USERNAME/nodevenv/public_html/myapp/18/bin/activate
+            source /home/inkoraof/nodevenv/public_html/myapp/24/bin/activate && cd /home/inkoraof/public_html/myapp
             
             # 5. FIX BUILD ERROR: Lower memory limit to prevent EAGAIN crash
             # Shared hosting usually caps at 1GB. 2048 was likely too high.
