@@ -15,22 +15,25 @@ jobs:
           host: ${{ secrets.CPANEL_HOST }}
           username: ${{ secrets.CPANEL_USERNAME }}
           key: ${{ secrets.CPANEL_SSH_KEY }}
-          # CRITICAL: Stop the script if any command fails (like git pull)
-          script_stop: true 
           script: |
             # 1. Navigate to app
             cd ~/public_html/myapp
             
-            # 2. FIX GIT ERROR: Tell git to use the deploy key we just created
+            # 2. Setup Git SSH
             export GIT_SSH_COMMAND="ssh -i ~/.ssh/github_deploy_key -o StrictHostKeyChecking=no"
             
-            # 3. Pull code (This will now work because of the Deploy Key)
-            git pull origin main
+            # 3. FIX GIT ERROR: Force reset to match GitHub exactly
+            # This discards local changes and removes untracked files like the logo
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd
             
-            # 4. Activate Node Environment (Replace with your actual source command)
-            source /home/inkoraof/nodevenv/public_html/myapp/24/bin/activate && cd /home/inkoraof/public_html/myapp
-            # 5. FIX BUILD ERROR: Increase memory limit for Next.js
-            export NODE_OPTIONS="--max-old-space-size=2048"
+            # 4. Activate Node Environment (REPLACE WITH YOUR ACTUAL SOURCE COMMAND)
+            source /home/YOUR_USERNAME/nodevenv/public_html/myapp/18/bin/activate
+            
+            # 5. FIX BUILD ERROR: Lower memory limit to prevent EAGAIN crash
+            # Shared hosting usually caps at 1GB. 2048 was likely too high.
+            export NODE_OPTIONS="--max-old-space-size=1024"
             
             # 6. Install and Build
             npm install
