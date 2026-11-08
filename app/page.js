@@ -7,6 +7,7 @@ import WhyInkora from "@/components/WhyInkora";
 import CTA from "@/components/CTA";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import  MarqueeTicker  from "@/components/MarqueeTicker";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <MarqueeTicker />
         <WhatWeDo />
         <Process />
         <WhatWeMake />
