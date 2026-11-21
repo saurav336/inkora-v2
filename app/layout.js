@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Inkora — Identity you can hold, and systems that run.",
+  title: "Inkora — Best Printing Service In Nepal",
   description:
     "Inkora designs the logo and brand system, produces the print and packaging that carries it into the world, and builds the digital tools that keep it working. One studio, start to finish.",
 };

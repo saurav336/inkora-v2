@@ -1,7 +1,7 @@
 import Image from "next/image";
 import footerLogo from "@/public/images/footer_logo.png";
 
-const STUDIO_LINKS = [
+const company_LINKS = [
     { label: "Services", href: "#services" },
     { label: "What we make", href: "#what-we-make" },
     { label: "Process", href: "#process" },
@@ -25,17 +25,17 @@ export default function Footer() {
                             </span>
                         </a>
                         <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
-                            A studio for brand identity, print production and IT solutions &mdash;
+                            A company for brand identity, print production and IT solutions &mdash;
                             designed, proofed and delivered under one roof.
                         </p>
                     </div>
 
                     <div>
                         <h3 className="font-mono text-xs font-semibold tracking-[0.2em] text-slate-500">
-                            STUDIO
+                            company
                         </h3>
                         <ul className="mt-4 flex flex-col gap-3">
-                            {STUDIO_LINKS.map((link) => (
+                            {company_LINKS.map((link) => (
                                 <li key={link.label}>
                                     <a href={link.href} className="text-sm text-slate-300 transition hover:text-white">
                                         {link.label}
@@ -64,10 +64,10 @@ export default function Footer() {
                 <div
                     className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
                     <p className="text-xs text-slate-500">
-                        &copy; 2026 Inkora Studio. All rights reserved.
+                        &copy; Inkora Pvt.Ltd. All rights reserved.
                     </p>
                     <p className="font-mono text-xs tracking-[0.2em] text-slate-500">
-                        BRANDING &middot; PRINT &middot; IT SOLUTIONS
+                        DESIGN &middot; PRINT &middot; IT SOLUTIONS
                     </p>
                 </div>
             </div>

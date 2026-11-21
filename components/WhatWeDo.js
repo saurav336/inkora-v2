@@ -15,7 +15,7 @@ export default function WhatWeDo() {
         </h2>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-500 sm:text-lg">
           From the first sketch of a mark to the server it runs on &mdash; every piece is
-          built to feel like it came from the same studio.
+          built to feel like it came from the same company.
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-3">

@@ -13,7 +13,7 @@ export default function WhyInkora() {
             Design, print and IT under one roof.
           </h2>
           <p className="mt-5 max-w-md text-base leading-relaxed text-slate-500 sm:text-lg">
-            Most studios hand you a logo and stop. Most printers never touch your brand
+            Most company's hand you a logo and stop. Most printers never touch your brand
             guidelines. Inkora does both &mdash; plus the digital side &mdash; so nothing
             gets lost in the handoff.
           </p>

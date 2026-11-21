@@ -1,4 +1,6 @@
+import { sendContactEmails } from "../../mail/mailer.js";
 import { NextResponse } from "next/server";
+
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -84,7 +86,29 @@ export async function POST(request) {
     return NextResponse.json({ error: "Something went wrong on our end. Please try again." }, { status: 500 });
   }
 
-  return NextResponse.json({ ok: true, id: submission.id }, { status: 201 });
+  try {
+    await sendContactEmails(value);
+
+    return NextResponse.json(
+      {
+        ok: true,
+        message: "Your inquiry has been submitted and email sent successfully.",
+        id: submission.id,
+      },
+      { status: 201 }
+    );
+  } catch (error) {
+    console.error("Email sending failed:", error);
+
+    return NextResponse.json(
+      {
+        ok: false,
+        message: "Your inquiry was saved, but email delivery failed. Please contact us directly.",
+        id: submission.id,
+      },
+      { status: 502 }
+    );
+  }
 }
 
 export async function GET() {

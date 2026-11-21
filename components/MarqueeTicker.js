@@ -5,12 +5,23 @@ import {initMarqueeTicker} from "@/app/assets/js/MarqueeTicker";
 
 export default function MarqueeTicker() {
     useEffect(() => {
-        const el = document.getElementById("marquee-ticker");
-        initMarqueeTicker("marquee-ticker");
+        const containerId = "marquee-ticker";
+
+        initMarqueeTicker(containerId);
+
         return () => {
-            if (el) el.innerHTML = "";
+            const el = document.getElementById(containerId);
+
+            if (el) {
+                el.innerHTML = "";
+            }
         };
     }, []);
 
-    return <div id="marquee-ticker"/>;
+    return (
+        <div
+            id="marquee-ticker"
+            className="w-full overflow-hidden"
+        />
+    );
 }

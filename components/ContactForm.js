@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const CONTACT_INFO = [
   { label: "Email", value: "inkora18@gmail.com" },
-  { label: "Phone", value: "9860757522 | 9828021463 "},
+  { label: "Phone", value: "9860757522 | 9828021463 " },
   { label: "Address", value: "Jadibuti, Kathmadu" },
   { label: "Hours", value: "Sun\u2013Fri, 9:30\u20135:30" },
 ];
@@ -33,6 +33,8 @@ export default function ContactForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    console.log(e);
+
     setStatus("submitting");
     setFieldErrors({});
     setErrorMessage("");
@@ -47,7 +49,11 @@ export default function ContactForm() {
 
       if (!res.ok) {
         setStatus("error");
-        setErrorMessage(data.error || "Something went wrong. Please try again.");
+        setErrorMessage(
+          data.error ||
+          data.message ||
+          "Something went wrong. Please try again."
+        );
         setFieldErrors(data.fieldErrors || {});
         return;
       }
